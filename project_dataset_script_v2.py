@@ -63,7 +63,6 @@ print('%i training images from %i classes' % (x_train.shape[0], y_train.shape[1]
 x_val, y_val = build_classification_dataset(val_files)
 print('%i validation images from %i classes' % (x_val.shape[0], y_train.shape[1]))
 
-
 # from here, you can start building your model
 # you will only need x_train and x_val for the autoencoder
 # you should extend the above script for the segmentation task (you will need a slightly different function for building the label images)
