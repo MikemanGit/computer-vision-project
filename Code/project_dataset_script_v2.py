@@ -4,6 +4,7 @@ import os
 from skimage import io
 from skimage.transform import resize
 
+
 # parameters that you should set before running this script
 filter = ['aeroplane', 'car', 'chair', 'dog',
           'bird']  # select class, this default should yield 1489 training and 1470 validation images
