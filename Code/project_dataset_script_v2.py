@@ -1,9 +1,11 @@
-from lxml import etree
-import numpy as np
 import os
+
+import numpy as np
+from lxml import etree
 from skimage import io
 from skimage.transform import resize
 
+from Code.pca_autoencoder import construct_observation_matrix, calculate_pca, linear_autoencoder
 
 # parameters that you should set before running this script
 filter = ['aeroplane', 'car', 'chair', 'dog',
@@ -63,7 +65,18 @@ x_train, y_train = build_classification_dataset(train_files)
 print('%i training images from %i classes' % (x_train.shape[0], y_train.shape[1]))
 x_val, y_val = build_classification_dataset(val_files)
 print('%i validation images from %i classes' % (x_val.shape[0], y_train.shape[1]))
+observation_matrix = construct_observation_matrix(x_train)
+x_reduced_red, x_reduced_blue, x_reduced_green = calculate_pca(observation_matrix, 4)
 
+print(x_reduced_red)
+print(x_reduced_red.shape)
+print(x_reduced_blue)
+print(x_reduced_blue.shape)
+print(x_reduced_green)
+print(x_reduced_green.shape)
+
+trained_autoencoder = linear_autoencoder(im_shape=(28, 28, 3), code_size=32, x_train=x_train, x_val=x_val)
+print('no errors')
 # from here, you can start building your model
 # you will only need x_train and x_val for the autoencoder
 # you should extend the above script for the segmentation task (you will need a slightly different function for building the label images)
