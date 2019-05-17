@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb7df65-2350-4d28-b623-e56d55d014f0" name="Default Changelist" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/Code/cnn.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/Annotations/2007_000027.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/Annotations/2007_000033.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/Annotations/2007_000042.xml" afterDir="false" />
@@ -13617,9 +13616,8 @@
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/SegmentationObject/2009_005262.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/SegmentationObject/2009_005287.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCtrainval_11-May-2009.tar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/computer-vision-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/computer-vision-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/pca-autoencoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/pca_autoencoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/cnn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/project_dataset_script_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/project_dataset_script_v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCA-Autoencoder.py" beforeDir="false" />
     </list>
@@ -13631,11 +13629,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/project_dataset_script_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="77" column="71" selection-start-line="77" selection-start-column="71" selection-end-line="77" selection-end-column="71" />
+            <state relative-caret-position="256">
+              <caret line="71" column="83" selection-start-line="71" selection-start-column="83" selection-end-line="71" selection-end-column="83" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -13646,8 +13644,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/pca_autoencoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+            <state relative-caret-position="257">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -13655,9 +13653,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/cnn.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+              <folding>
+                <element signature="e#0#70#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -13688,15 +13693,16 @@
         <option value="$PROJECT_DIR$/code/pca_autoencoder.py" />
         <option value="$PROJECT_DIR$/code/project_dataset_script_v2.py" />
         <option value="$PROJECT_DIR$/autoencoder/project_dataset_script_v2.py" />
-        <option value="$PROJECT_DIR$/Code/project_dataset_script_v2.py" />
         <option value="$PROJECT_DIR$/Code/cnn.py" />
         <option value="$PROJECT_DIR$/Code/pca_autoencoder.py" />
+        <option value="$PROJECT_DIR$/Code/project_dataset_script_v2.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="745" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -13800,7 +13806,9 @@
       <workItem from="1557159868320" duration="667000" />
       <workItem from="1557170089571" duration="231000" />
       <workItem from="1557241949027" duration="3819000" />
-      <workItem from="1557334546711" duration="17176000" />
+      <workItem from="1557334546711" duration="18709000" />
+      <workItem from="1558018980512" duration="873000" />
+      <workItem from="1558019911075" duration="6439000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1557153330729</created>
@@ -13823,28 +13831,35 @@
       <option name="project" value="LOCAL" />
       <updated>1557158877348</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="pca and linear auto encoder are finished. plotting of the results are still needed.">
+      <created>1557428677282</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1557428677282</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27952000" />
+    <option name="totallyTimeSpent" value="36797000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="949" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08791209" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08974359" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32977587" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5048026" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26044226" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5032787" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32977587" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3229508" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32977587" />
@@ -13853,7 +13868,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.18070818" />
+      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.11782662" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -13865,19 +13880,8 @@
     <MESSAGE value="pca and linear auto encoder are finished. plotting of the results are still needed." />
     <option name="LAST_COMMIT_MESSAGE" value="pca and linear auto encoder are finished. plotting of the results are still needed." />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Code/project_dataset_script_v2.py</url>
-          <line>77</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/computer_vision_project$project_dataset_script_v2.coverage" NAME="project_dataset_script_v2 Coverage Results" MODIFIED="1557428273008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/computer_vision_project$project_dataset_script_v2.coverage" NAME="project_dataset_script_v2 Coverage Results" MODIFIED="1558032089342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Code/__init__.py">
@@ -13900,74 +13904,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/tokenize.py">
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/tokenize.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/numpy/core/fromnumeric.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/input_layer.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/sequential.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/training.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/codecs.py" />
+    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/training_utils.py" />
+    <entry file="file://$PROJECT_DIR$/Code/project_dataset_script_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6570">
-          <caret line="446" selection-start-line="446" selection-end-line="446" />
+        <state relative-caret-position="256">
+          <caret line="71" column="83" selection-start-line="71" selection-start-column="83" selection-end-line="71" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/numpy/core/fromnumeric.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/input_layer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="181" selection-start-line="181" selection-end-line="181" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/sequential.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/training.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="951" selection-start-line="951" selection-end-line="951" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="320" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.7/site-packages/keras/engine/training_utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1411">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/cnn.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/pca_autoencoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="10" />
+        <state relative-caret-position="257">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/project_dataset_script_v2.py">
+    <entry file="file://$PROJECT_DIR$/Code/cnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="77" column="71" selection-start-line="77" selection-start-column="71" selection-end-line="77" selection-end-column="71" />
+        <state relative-caret-position="375">
+          <caret line="25" column="43" lean-forward="true" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
           <folding>
-            <element signature="e#0#9#0" expanded="true" />
+            <element signature="e#0#70#0" expanded="true" />
           </folding>
         </state>
       </provider>
