@@ -76,9 +76,10 @@ def linear_autoencoder(im_shape, code_size, x_train, x_val):
     # Output layer
     autoencoder.add(Reshape(im_shape))
 
-    autoencoder.compile('adamax', 'mse')  # here we can play with the optimizer and loss function
+    autoencoder.compile(optimizer='adamax', loss='mse',
+                        metrics=['mse', 'mae'])  # here we can play with the optimizer and loss function
     autoencoder.summary()
     # actual training
-    autoencoder.fit(x=x_train, y=x_train, epochs=50, validation_data=[x_val, x_val], batch_size=x_train.shape[0])
+    history = autoencoder.fit(x=x_train, y=x_train, epochs=500, validation_data=[x_val, x_val], verbose=1)
 
-    return autoencoder
+    return history

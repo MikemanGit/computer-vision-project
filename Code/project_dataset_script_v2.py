@@ -6,7 +6,13 @@ from skimage import io
 from skimage.transform import resize
 
 from Code.pca_autoencoder import construct_observation_matrix, calculate_pca, linear_autoencoder
-from Code.cnn import create_cnn
+from Code.cnn_autoencoder import create_cnn, show_image, train_cnn, graph_summary
+from Code.cnn_classification import create_classifier
+
+# enable gpu support
+import plaidml.keras
+
+plaidml.keras.install_backend()
 
 # parameters that you should set before running this script
 filter = ['aeroplane', 'car', 'chair', 'dog',
@@ -66,6 +72,7 @@ x_train, y_train = build_classification_dataset(train_files)
 print('%i training images from %i classes' % (x_train.shape[0], y_train.shape[1]))
 x_val, y_val = build_classification_dataset(val_files)
 print('%i validation images from %i classes' % (x_val.shape[0], y_train.shape[1]))
+show_image(x_train, y_train, 100)
 
 # begin code
 observation_matrix = construct_observation_matrix(x_train)
@@ -78,10 +85,16 @@ print(x_reduced_blue.shape)
 print(x_reduced_green)
 print(x_reduced_green.shape)
 
-#trained_autoencoder = linear_autoencoder(im_shape=(28, 28, 3), code_size=32, x_train=x_train, x_val=x_val)
+# trained_autoencoder = linear_autoencoder(im_shape=(28, 28, 3), code_size=32, x_train=x_train, x_val=x_val)
 print('no errors')
 cnn = create_cnn(im_shape=(28, 28, 3))
-cnn.summary()
+trained_cnn = train_cnn(cnn, x_train, x_train, 10, (x_val, x_val))  # learn itself -> autoencoder
+classifier = create_classifier(cnn)
+classifier.summary()
+# graph_summary(trained_cnn)
+
+# for i, layer in enumerate(trained_cnn.layers):
+#     print(i, layer.name)
 # from here, you can start building your model
 # you will only need x_train and x_val for the autoencoder
 # you should extend the above script for the segmentation task (you will need a slightly different function for building the label images)
