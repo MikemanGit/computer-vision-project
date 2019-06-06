@@ -1,4 +1,5 @@
 import os
+import time
 
 import numpy as np
 from lxml import etree
@@ -6,8 +7,9 @@ from skimage import io
 from skimage.transform import resize
 
 from Code.pca_autoencoder import construct_observation_matrix, calculate_pca, linear_autoencoder
-from Code.cnn_autoencoder import create_cnn, show_image, train_cnn, graph_summary
-from Code.cnn_classification import create_classifier
+from Code.cnn_autoencoder import create_cnn, show_image, train_cnn, visualize_train_res, show_reconstruction_image
+from Code.cnn_classification import create_classifier, create_random_classifier
+from Code.segmentation_cnn import show_mask, create_simple_binary_mask, create_segmentation_cnn
 
 # enable gpu support
 import plaidml.keras
@@ -18,7 +20,7 @@ plaidml.keras.install_backend()
 filter = ['aeroplane', 'car', 'chair', 'dog',
           'bird']  # select class, this default should yield 1489 training and 1470 validation images
 voc_root_folder = "/Users/Michael/PycharmProjects/School/computer-vision-project/VOCdevkit"  # please replace with the location on your laptop where you unpacked the tarball
-image_size = 28  # image size that you will use for your network (input images will be resampled to this size), lower if you have troubles on your laptop (hint: use io.imshow to inspect the quality of the resampled images before feeding it into your network!)
+image_size = 224  # image size that you will use for your network (input images will be resampled to this size), lower if you have troubles on your laptop (hint: use io.imshow to inspect the quality of the resampled images before feeding it into your network!)
 
 # step1 - build list of filtered filenames
 annotation_folder = os.path.join(voc_root_folder, "VOC2009/Annotations/")
@@ -67,34 +69,86 @@ def build_classification_dataset(list_of_files):
 
     return x, y
 
+# from here, you can start building your model
+# you will only need x_train and x_val for the autoencoder
+# you should extend the above script for the segmentation task (you will need a slightly different function for building the label images)
 
+def build_segmentation_dataset(list_of_files):
+    """ build training or validation set
+
+    :param list_of_files: list of filenames to build trainset with
+    :return: tuple with x np.ndarray of shape (n_images, image_size, image_size, 3) and  y np.ndarray of shape (n_images, n_classes)
+    """
+    temp = []
+    train_labels = []
+    for f_cf in list_of_files:
+        with open(f_cf) as file:
+            lines = file.read().splitlines()
+            temp.append([line.split()[0] for line in lines if int(line.split()[-1]) == 1])
+            label_id = [f_ind for f_ind, filt in enumerate(filter) if filt in f_cf][0]
+            train_labels.append(len(temp[-1]) * [label_id])
+    train_filter = [item for l in temp for item in l]
+
+    image_folder = os.path.join(voc_root_folder, "VOC2009/JPEGImages/")
+    image_filenames = [os.path.join(image_folder, file) for f in train_filter for file in os.listdir(image_folder) if
+                       f in file]
+    x = np.array([resize(io.imread(img_f), (image_size, image_size, 3)) for img_f in image_filenames]).astype(
+        'float32')
+    # changed y to an array of shape (num_examples, num_classes) with 0 if class is not present and 1 if class is present
+    y_temp = []
+    for tf in train_filter:
+        y_temp.append([1 if tf in l else 0 for l in temp])
+    y = np.array(y_temp)
+
+    return x, y
+
+
+t = time.time()
+
+# classification dataset
 x_train, y_train = build_classification_dataset(train_files)
 print('%i training images from %i classes' % (x_train.shape[0], y_train.shape[1]))
 x_val, y_val = build_classification_dataset(val_files)
 print('%i validation images from %i classes' % (x_val.shape[0], y_train.shape[1]))
-show_image(x_train, y_train, 100)
+show_image(x_train, y_train, 600)
+show_mask(x_train[600])
 
-# begin code
-observation_matrix = construct_observation_matrix(x_train)
-x_reduced_red, x_reduced_blue, x_reduced_green = calculate_pca(observation_matrix, 4)
 
-print(x_reduced_red)
-print(x_reduced_red.shape)
-print(x_reduced_blue)
-print(x_reduced_blue.shape)
-print(x_reduced_green)
-print(x_reduced_green.shape)
+cnn = create_cnn(im_shape=(224, 224, 3))
+trained_cnn_autoencoder = train_cnn(cnn, x_train, x_train, 10, (x_val, x_val))  # learn itself -> autoencoder
+visualize_train_res(trained_cnn_autoencoder, activation='')
+show_reconstruction_image(trained_cnn_autoencoder,x_train[100])
 
-# trained_autoencoder = linear_autoencoder(im_shape=(28, 28, 3), code_size=32, x_train=x_train, x_val=x_val)
-print('no errors')
-cnn = create_cnn(im_shape=(28, 28, 3))
-trained_cnn = train_cnn(cnn, x_train, x_train, 10, (x_val, x_val))  # learn itself -> autoencoder
-classifier = create_classifier(cnn)
-classifier.summary()
+elapsed = time.time() - t
+print('Elapsed: {}'.format(elapsed))
+
+# #begin code
+# observation_matrix = construct_observation_matrix(x_train)
+# x_reduced_red, x_reduced_blue, x_reduced_green = calculate_pca(observation_matrix, 4)
+#
+# print(x_reduced_red)
+# print(x_reduced_red.shape)
+# print(x_reduced_blue)
+# print(x_reduced_blue.shape)
+# print(x_reduced_green)
+# print(x_reduced_green.shape)
+#
+# # trained_autoencoder = linear_autoencoder(im_shape=(28, 28, 3), code_size=32, x_train=x_train, x_val=x_val)
+# print('no errors')
+
+#classifier = create_classifier(im_shape=(28, 28, 3), cnn=trained_cnn_autoencoder)
+#trained_classifier = train_cnn(classifier, x_train, y_train, 10, (x_val, y_val))
+#
+# classifier_random = create_random_classifier(im_shape=(28, 28, 3))
+# trained_classifier_random = train_cnn(classifier_random, x_train, y_train, 10, (x_val, y_val))
 # graph_summary(trained_cnn)
 
 # for i, layer in enumerate(trained_cnn.layers):
 #     print(i, layer.name)
-# from here, you can start building your model
-# you will only need x_train and x_val for the autoencoder
-# you should extend the above script for the segmentation task (you will need a slightly different function for building the label images)
+
+# seg_y_train = create_simple_binary_mask(x_train)
+# seg_y_val = create_simple_binary_mask(x_val)
+# seg = create_segmentation_cnn(im_shape=(224, 224, 3))
+# trained_seg = train_cnn(seg, x_train, seg_y_train, 10, (x_val, seg_y_val))
+
+

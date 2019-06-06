@@ -1,11 +1,12 @@
-from keras.layers import Input, Conv2D, MaxPooling2D, Dense, Flatten
+from keras.layers import Input,InputLayer, Conv2D, MaxPooling2D, Dense, Flatten
 from keras.models import Model, Sequential
 
 
 def create_classifier(im_shape, cnn):
     # create new model
     classifier = Sequential()
-    classifier.add(Input(im_shape))
+
+    classifier.add(InputLayer(im_shape))
     # get the pretrained layers
     trained_layers = [layers for layers in cnn.layers[:7]]
 
@@ -15,7 +16,7 @@ def create_classifier(im_shape, cnn):
         classifier.add(layer)
     # initialize with or without random weights
     classifier.add(Flatten())
-    classifier.add(Dense(5, activation='softmax', kernel_initializer=''))  # softmax -> multiclass, multilabel
+    classifier.add(Dense(5, activation='softmax'))  # softmax -> multiclass, multilabel
     classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['acc', 'mse', 'mae'])
     return classifier
 
@@ -35,7 +36,7 @@ def create_random_classifier(im_shape):
     # at this point the representation is (4, 4, 8) i.e. 128-dimensional
     # initialize with or without random weights
     classifier = Flatten()(encoded)
-    classifier = Dense(5, activation='softmax', kernel_initializer='')(classifier)  # softmax -> multiclass, multilabel
+    classifier = Dense(5, activation='softmax', kernel_initializer='random_normal')(classifier)  # softmax -> multiclass, multilabel
     classifier = Model(input_img, classifier)
 
     classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics=['acc', 'mse', 'mae'])

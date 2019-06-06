@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bb7df65-2350-4d28-b623-e56d55d014f0" name="Default Changelist" comment="init commit">
-      <change afterPath="$PROJECT_DIR$/Code/cnn_autoencoder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Code/cnn_classification.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Michael.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/segmentation_cnn.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/Annotations/2007_000027.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/Annotations/2007_000033.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/VOCdevkit/VOC2009/Annotations/2007_000042.xml" afterDir="false" />
@@ -13620,6 +13620,8 @@
       <change afterPath="$PROJECT_DIR$/VOCtrainval_11-May-2009.tar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/cnn.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/cnn_autoencoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/cnn_autoencoder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/cnn_classification.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/cnn_classification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/pca_autoencoder.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/pca_autoencoder.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/project_dataset_script_v2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/project_dataset_script_v2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PCA-Autoencoder.py" beforeDir="false" />
@@ -13635,8 +13637,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/project_dataset_script_v2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
+            <state relative-caret-position="110">
+              <caret line="118" column="57" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -13644,37 +13646,46 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Code/cnn_autoencoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="86">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/segmentation_cnn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="56">
+              <caret line="120" column="116" selection-start-line="120" selection-start-column="116" selection-end-line="120" selection-end-column="116" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/cnn_classification.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Code/pca_autoencoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="652">
-              <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+            <state relative-caret-position="95">
+              <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/cnn_autoencoder.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="e#0#66#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Code/cnn_classification.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#68#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -13708,11 +13719,12 @@
         <option value="$PROJECT_DIR$/code/pca_autoencoder.py" />
         <option value="$PROJECT_DIR$/code/project_dataset_script_v2.py" />
         <option value="$PROJECT_DIR$/autoencoder/project_dataset_script_v2.py" />
-        <option value="$PROJECT_DIR$/Code/pca_autoencoder.py" />
         <option value="$PROJECT_DIR$/Code/cnn.py" />
-        <option value="$PROJECT_DIR$/Code/cnn_autoencoder.py" />
-        <option value="$PROJECT_DIR$/Code/project_dataset_script_v2.py" />
+        <option value="$PROJECT_DIR$/Code/pca_autoencoder.py" />
         <option value="$PROJECT_DIR$/Code/cnn_classification.py" />
+        <option value="$PROJECT_DIR$/Code/segmentation_cnn.py" />
+        <option value="$PROJECT_DIR$/Code/project_dataset_script_v2.py" />
+        <option value="$PROJECT_DIR$/Code/cnn_autoencoder.py" />
       </list>
     </option>
   </component>
@@ -13744,80 +13756,18 @@
             </path>
             <path>
               <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="computer-vision-project" type="462c0819:PsiDirectoryNode" />
+              <item name="VOCdevkit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="computer-vision-project" type="462c0819:PsiDirectoryNode" />
+              <item name="VOCdevkit" type="462c0819:PsiDirectoryNode" />
+              <item name="VOC2009" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="keras" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="keras" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="python3.6" type="462c0819:PsiDirectoryNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="keras" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="keras" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="keras" type="462c0819:PsiDirectoryNode" />
-              <item name="engine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="computer-vision-project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="&lt; Python 3.7 (ComputerVisionProject) &gt;" type="70bed36:NamedLibraryElementNode" />
-              <item name="site-packages" type="462c0819:PsiDirectoryNode" />
-              <item name="keras" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -13906,7 +13856,8 @@
       <workItem from="1559404843641" duration="207000" />
       <workItem from="1559470228615" duration="10000" />
       <workItem from="1559549287704" duration="22000" />
-      <workItem from="1559549347788" duration="18622000" />
+      <workItem from="1559549347788" duration="22816000" />
+      <workItem from="1559653022773" duration="21916000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1557153330729</created>
@@ -13943,37 +13894,44 @@
       <option name="project" value="LOCAL" />
       <updated>1558096248200</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added convolutional auto encoder and classification networks">
+      <created>1559642577122</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1559642577122</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64232000" />
+    <option name="totallyTimeSpent" value="90342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.0995116" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1007326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32977587" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.92102456" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.65208113" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.50160086" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" />
+      <window_info anchor="bottom" id="Docker" order="7" weight="0.32977587" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32230523" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32977587" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.28032786" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32977587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.22283272" />
+      <window_info active="true" anchor="right" id="SciView" order="4" visible="true" weight="0.16788767" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -13984,10 +13942,11 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="pca and linear auto encoder are finished. plotting of the results are still needed." />
     <MESSAGE value="added cnn" />
-    <option name="LAST_COMMIT_MESSAGE" value="added cnn" />
+    <MESSAGE value="added convolutional auto encoder and classification networks" />
+    <option name="LAST_COMMIT_MESSAGE" value="added convolutional auto encoder and classification networks" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/computer_vision_project$project_dataset_script_v2.coverage" NAME="project_dataset_script_v2 Coverage Results" MODIFIED="1559636360291" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/computer_vision_project$project_dataset_script_v2.coverage" NAME="project_dataset_script_v2 Coverage Results" MODIFIED="1559828058408" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Code/__init__.py">
@@ -14041,16 +14000,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/project_dataset_script_v2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="92" column="19" selection-start-line="92" selection-start-column="19" selection-end-line="92" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/envs/ComputerVisionProject/lib/python3.6/site-packages/keras/engine/sequential.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -14058,32 +14007,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Code/cnn_classification.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Code/pca_autoencoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="652">
-          <caret line="76" column="31" selection-start-line="76" selection-start-column="31" selection-end-line="76" selection-end-column="31" />
+        <state relative-caret-position="95">
+          <caret line="78" column="54" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/cnn_autoencoder.py">
+    <entry file="file://$PROJECT_DIR$/Code/segmentation_cnn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="56">
+          <caret line="120" column="116" selection-start-line="120" selection-start-column="116" selection-end-line="120" selection-end-column="116" />
           <folding>
-            <element signature="e#0#66#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/cnn_classification.py">
+    <entry file="file://$PROJECT_DIR$/Code/project_dataset_script_v2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        <state relative-caret-position="110">
+          <caret line="118" column="57" selection-start-line="118" selection-start-column="57" selection-end-line="118" selection-end-column="57" />
           <folding>
-            <element signature="e#0#68#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/cnn_autoencoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -80,6 +80,6 @@ def linear_autoencoder(im_shape, code_size, x_train, x_val):
                         metrics=['mse', 'mae'])  # here we can play with the optimizer and loss function
     autoencoder.summary()
     # actual training
-    history = autoencoder.fit(x=x_train, y=x_train, epochs=500, validation_data=[x_val, x_val], verbose=1)
+    history = autoencoder.fit(x=x_train, y=x_train, epochs=100, validation_data=[x_val, x_val], verbose=1)
 
     return history
