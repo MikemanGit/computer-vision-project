@@ -5,9 +5,10 @@ import numpy as np
 from lxml import etree
 from skimage import io
 from skimage.transform import resize
+from keras.models import save_model, load_model
 
-from Code.pca_autoencoder import construct_observation_matrix, calculate_pca, linear_autoencoder
-from Code.cnn_autoencoder import show_image, show_reconstruction_image
+from Code.cnn_autoencoder import train_cnn, visualize_train_res, visualize_training_history
+from Code.cnn_classification import predict_class, create_random_classifier
 
 # enable gpu support
 import plaidml.keras
@@ -80,20 +81,21 @@ x_train, y_train = build_classification_dataset(train_files)
 print('%i training images from %i classes' % (x_train.shape[0], y_train.shape[1]))
 x_val, y_val = build_classification_dataset(val_files)
 print('%i validation images from %i classes' % (x_val.shape[0], y_train.shape[1]))
-show_image(x_train, y_train, 600)
-# begin code
-observation_matrix = construct_observation_matrix(x_train)
-x_reduced_red, x_reduced_blue, x_reduced_green = calculate_pca(observation_matrix, 4)
 
-print(x_reduced_red)
-print(x_reduced_red.shape)
-print(x_reduced_blue)
-print(x_reduced_blue.shape)
-print(x_reduced_green)
-print(x_reduced_green.shape)
 
-trained_autoencoder = linear_autoencoder(im_shape=(64, 64, 3), code_size=32, x_train=x_train, x_val=x_val)
-show_reconstruction_image(trained_autoencoder, x_train[100])
-print('no errors')
+trained_cnn_classifier = load_model(
+     filepath='/Users/Michael/PycharmProjects/School/computer-vision-project/Models/cnnclassifierrandom.h5')
+visualize_training_history(filepath='/Users/Michael/PycharmProjects/School/computer-vision-project/Models/Training History/history_cnn_random.pckl',activation='Softmax', loss='binary crossentropy')
+
+predict_class(trained_cnn_classifier, x_train[100], y_train[100])
+
 elapsed = time.time() - t
 print('Elapsed: {}'.format(elapsed))
+
+
+# only for retraining
+# cnn_random = create_random_classifier(im_shape=(64, 64, 3))
+# trained_cnn_random = train_cnn(cnn=cnn_random, filename='cnn_random', x_train=x_train, y_train=y_train, epochs=50,
+#                            validation_data=(x_val, y_val))
+# save_model(model=trained_cnn_random,
+#           filepath='/Users/Michael/PycharmProjects/School/computer-vision-project/Models/cnnclassifierrandom.h5')

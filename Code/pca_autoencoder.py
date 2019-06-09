@@ -32,31 +32,8 @@ def calculate_pca(x_train_observation_matrix, principal_components):
     x_reduced_red = np.dot(ur[:, :principal_components], np.diag(sr[:principal_components]))
     x_reduced_blue = np.dot(ub[:, :principal_components], np.diag(sb[:principal_components]))
     x_reduced_green = np.dot(ug[:, :principal_components], np.diag(sg[:principal_components]))
-    # plot here
     return x_reduced_red, x_reduced_blue, x_reduced_green
 
-
-# def linear_autoencoder(im_shape, code_size=32):
-#     # create linear autoencoder model
-#     input = Input(im_shape)  # input tensor, needed for keras models ?
-#
-#     # encoder part
-#     encoder = Sequential()
-#     encoder.add(InputLayer(im_shape))
-#     encoder.add(Flatten())  # flatten image to vector
-#     encoder.add(Dense(code_size))
-#
-#     # decoder part
-#     decoder = Sequential()
-#     decoder.add(InputLayer((code_size,)))
-#     decoder.add(Dense(np.prod(im_shape)))
-#     decoder.add(Reshape(im_shape))
-#
-#     # build model
-#     code = encoder(input)
-#     reconstruction = decoder(code)
-#     autoencoder = Model(input, reconstruction)
-#     return autoencoder
 
 def linear_autoencoder(im_shape, code_size, x_train, x_val):
     autoencoder = Sequential()
@@ -76,7 +53,7 @@ def linear_autoencoder(im_shape, code_size, x_train, x_val):
     # Output layer
     autoencoder.add(Reshape(im_shape))
 
-    autoencoder.compile(optimizer='adamax', loss='mse',
+    autoencoder.compile(optimizer='adam', loss='mse',
                         metrics=['mse', 'mae'])  # here we can play with the optimizer and loss function
     autoencoder.summary()
     # actual training
